@@ -1,4 +1,6 @@
 # titlr
+![promo](promo_screen.png)
+
 Tiny Chrome extension for renaming tabs
 
 ## Installation
