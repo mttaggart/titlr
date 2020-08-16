@@ -29,7 +29,7 @@ function getTitles() {
 
 async function saveTitle(title, url) {
     const titles = await getTitles();
-    const found  = checkTitle(titles, url);
+    const found  = await checkTitle(titles, url);
     if (found < 0) {
         titles.push({
             url,
