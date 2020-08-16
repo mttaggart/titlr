@@ -41,9 +41,10 @@ async function saveTitle(title, url) {
     chrome.storage.sync.set({titlr: titles});
 }
 
-
 async function checkTitle(titles, url) {
-    return titles.findIndex( t => t.url === url);
+    return new Promise((resolve, reject) => {
+        resolve(titles.findIndex( t => t.url === url));
+    });
 }
 
 async function setTitle(title) {
@@ -66,7 +67,6 @@ document.querySelector("#load-title")
         const tab = await getTab();
         const url = await getTabUrl(tab.id);
         const found = await checkTitle(titles, url);
-        console.log(found);
         if (found >= 0) {
             setTitle(titles[found].title);
         }
