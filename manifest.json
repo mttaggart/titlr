@@ -2,5 +2,18 @@
     "name": "Titlr",
     "version": "0.1",
     "description": "Tab Re-Titler",
-    "manifest_version": 2
+    "manifest_version": 2,
+    "permissions": [
+        "storage", 
+        "declarativeContent",
+        "activeTab"
+    ],
+    "browser_action": {
+        "default_title": "Titlr",
+        "default_popup": "index.html"
+    },
+    "content_scripts": [{
+        "matches": ["http://*/*", "https://*/*"],
+        "js": ["contentscript.js"]
+    }]
   }
