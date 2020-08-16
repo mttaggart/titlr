@@ -1,3 +1,9 @@
+@font-face {
+    font-family: "SF Sports Night";
+    src: url("../font/SF_Sports_Night.ttf");
+}
+
+
 body {
     height: 100px;
     width: 400px;
@@ -8,6 +14,8 @@ body {
 
 h1 {
     margin: 0px;
+    font-family: "SF Sports Night", sans-serif;
+    font-weight: 200;
 }
 
 input {
